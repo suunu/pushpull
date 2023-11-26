@@ -7,11 +7,13 @@
 // A simple Particle class
 
 class Particle {
-  constructor(x, y) {
+  constructor(x, y, z,a) {
     this.position = createVector(x, y);
-    this.velocity = createVector(random(-1,1), random(-1,1));
+    this.velocity = createVector(0,1);
+    this.velocity.rotate(z);
     this.acceleration = createVector(0, 0);
-    this.lifespan = 300;
+    this.lifespan = 1000;
+    this.co=a
   }
 
   run() {
@@ -33,10 +35,9 @@ class Particle {
 
   // Method to display
   show() {
-    stroke(0);
-    strokeWeight(2);
-    fill(127);
-    circle(this.position.x, this.position.y, 8);
+    stroke(this.co,100,100);
+    strokeWeight(10)
+    line(width/2,height/2 ,this.position.x, this.position.y);
   }
 
   // Is the particle still useful?

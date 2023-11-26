@@ -18,7 +18,7 @@ class Repeller {
     let force = p5.Vector.sub(this.position, particle.position);
     let distance = force.mag();
     
-    if(distance>150){
+    if(distance>height/2-50){
       let strength = this.power/ distance*distance;
     force.setMag(strength);
       return force
@@ -26,7 +26,7 @@ class Repeller {
     else{
       let strength =-0.3* (this.power);
       force.setMag(strength);
-        return force
+        return force;
 
     }
   }

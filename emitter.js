@@ -6,9 +6,11 @@ class Emitter {
     this.particles = [];
   }
 
-  addParticle() {
-    this.origin.set(mouseX,mouseY);
-    this.particles.push(new Particle(this.origin.x, this.origin.y));
+  addParticle(z,a) {
+    //this.origin.set(mouseX,mouseY);
+    
+    this.particles.push(new Particle(this.origin.x, this.origin.y,z,a))
+  
   }
 
   applyForce(force) {
@@ -16,7 +18,7 @@ class Emitter {
     for (let particle of this.particles) {
       particle.applyForce(force);
     }
-  }
+  } 
 
   applyRepeller(repeller) {
     //{!4} Calculating a force for each Particle based on a Repeller
