@@ -23,7 +23,7 @@ function draw() {
  d= map(c,-1,1,0,330);
   repeller = new Repeller(mouseX,mouseY);
   for(i=0;i<20;i++){
-    rotata=rotata+a;
+    rotata=rotata+8;
   emitter.addParticle(rotata,d);
   };
   // We’re applying a universal gravity.
