@@ -4,8 +4,8 @@ let emitter;
 //{!1} One repeller
 let repeller;
 let rotata=0;
-let a=0;
-let b=0;
+let a=1000;
+let b=1;
 let c = 1;
 let d;
 function setup() {
