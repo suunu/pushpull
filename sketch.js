@@ -11,7 +11,7 @@ let d;
 function setup() {
   colorMode(HSB);
   createCanvas(windowWidth,windowHeight);
-  emitter = new Emitter(width / 2, height/2);
+  emitter = new Emitter(mouseX, mouseY);
   
 }
 
@@ -21,7 +21,7 @@ function draw() {
   b+=0.01
  c= sin(b)
  d= map(c,-1,1,0,330);
-  repeller = new Repeller(width/2,height/2);
+  repeller = new Repeller(mouseX,mouseY);
   for(i=0;i<20;i++){
     rotata=rotata+a;
   emitter.addParticle(rotata,d);
