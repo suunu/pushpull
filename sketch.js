@@ -4,7 +4,7 @@ let emitter;
 //{!1} One repeller
 let repeller;
 let rotata=0;
-let a=1000;
+
 let b=1;
 let c = 1;
 let d;
@@ -12,12 +12,14 @@ function setup() {
   colorMode(HSB);
   createCanvas(windowWidth,windowHeight);
   emitter = new Emitter(width / 2, height/2);
-  
+  slider = createSlider(0, 255,0);
+  slider.position(20, 20);
 }
 
 function draw() {
   background(255);
-  a+=0.0001
+  const a = slider.value();
+ 
   b+=0.01
  c= sin(b)
  d= map(c,-1,1,0,330);
