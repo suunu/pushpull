@@ -12,17 +12,21 @@ function setup() {
   colorMode(HSB);
   createCanvas(windowWidth,windowHeight);
   emitter = new Emitter(width / 2, height/2);
-  slider = createSlider(0, 255,0);
-  slider.position(20, 20);
+  slider1 = createSlider(0, 255);
+  slider1.position(20, 20);
+  slider2 = createSlider(0,100);
+  slider2.position(20, 2);
 }
 
 function draw() {
-  background(255);
-  const a = slider.value();
- 
-  b+=0.01
+
+  const a = slider1.value();
+  const alp = slider2.value();
+  let alp2 = map(alp,0,100,0,1);
+  background(255,alp2);
+  b+=0.1
  c= sin(b)
- d= map(c,-1,1,0,330);
+ d= map(c,-1,1,0,1);
   repeller = new Repeller(width/2,height/2);
   for(i=0;i<20;i++){
     rotata=rotata+a;

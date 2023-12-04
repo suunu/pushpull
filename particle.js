@@ -12,7 +12,7 @@ class Particle {
     this.velocity = createVector(0,1);
     this.velocity.rotate(z);
     this.acceleration = createVector(0, 0);
-    this.lifespan = 1000;
+    this.lifespan = 500;
     this.co=a
   }
 
@@ -36,7 +36,7 @@ class Particle {
   // Method to display
   show() {
     noStroke()
-    fill(this.co,100,100);
+    fill(10,this.co);
   
    circle(this.position.x, this.position.y,8);
   }
