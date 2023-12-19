@@ -37,8 +37,10 @@ class Particle {
   show() {
     noStroke()
     fill(10,this.co);
+    
+rotate(0.00001);
+   ellipse(this.position.x, this.position.y,10,2);
   
-   circle(this.position.x, this.position.y,8);
   }
 
   // Is the particle still useful?

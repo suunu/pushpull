@@ -16,15 +16,19 @@ function setup() {
   slider1.position(20, 20);
   slider2 = createSlider(0,100);
   slider2.position(20, 2);
+  slider3 = createSlider(0,100);
+  slider3.position(20, 38);
 }
 
 function draw() {
 
   const a = slider1.value();
   const alp = slider2.value();
+  const sinn = slider3.value();
+  let sinn2 = map(sinn,0,100,0,0.1);
   let alp2 = map(alp,0,100,0,1);
   background(255,alp2);
-  b+=0.1
+  b+=sinn2
  c= sin(b)
  d= map(c,-1,1,0,1);
   repeller = new Repeller(width/2,height/2);
